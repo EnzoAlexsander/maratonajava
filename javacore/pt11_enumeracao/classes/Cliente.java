@@ -1,0 +1,54 @@
+package maratonajava.javacore.pt11_enumeracao.classes;
+
+public class Cliente {
+    public enum TipoPagamento {
+        AVISTA, APRAZO
+    }
+    private String nome;
+    private TipoCliente tipoCliente;
+    private TipoPagamento tipoPagamento;
+
+
+    public Cliente() {
+    }
+
+    public Cliente(String nome, TipoCliente tipo, TipoPagamento tipoPagamento) {
+        this.nome = nome;
+        this.tipoCliente = tipo;
+        this.tipoPagamento = tipoPagamento;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", tipo=" + tipoCliente.getNome() +
+                ", tipoPagamento=" + tipoPagamento +
+                ", numero="+ tipoCliente.getTipo() +
+                '}';
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public TipoCliente getTipo() {
+        return tipoCliente;
+    }
+
+    public void setTipo(TipoCliente tipo) {
+        this.tipoCliente = tipo;
+    }
+
+    public TipoPagamento getTipoPagamento() {
+        return tipoPagamento;
+    }
+
+    public void setTipoPagamento(TipoPagamento tipoPagamento) {
+        this.tipoPagamento = tipoPagamento;
+    }
+}
